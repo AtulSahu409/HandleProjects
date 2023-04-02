@@ -5,7 +5,7 @@ const getadd=(data,page)=>(dispatch)=> {
  
     dispatch({type:types.Get_Add_Request})
       
-    return axios.get(`http://localhost:3010/project/${data}/${page}`)
+    return axios.get(`https://angry-singlet-ant.cyclic.app/project/${data}/${page}`)
       .then((r) => {
           dispatch({type:types.Get_Add_Success, payload:r.data})
           console.log(r.data)
@@ -21,7 +21,7 @@ const getadd=(data,page)=>(dispatch)=> {
 
 const postadd=(data)=>(dispatch)=>{
     dispatch({type:types.Post_Add_Request})
-    return axios.post(`http://localhost:3010/project/newpost`,data)
+    return axios.post(`https://angry-singlet-ant.cyclic.app/newpost`,data)
     .then((res)=>{dispatch({type:types.Post_Add_Success,payload:res.data})
         console.log(res)
 
